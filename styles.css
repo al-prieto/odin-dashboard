@@ -185,6 +185,7 @@ input[type="search"]::-webkit-search-cancel-button {
   font-weight: 600;
   font-style: normal;
   color: var(--sidebar-text-color);
+  /* position: relative; */
 }
 
 .header-user img {
@@ -293,7 +294,7 @@ input[type="search"]::-webkit-search-cancel-button {
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
-  min-height: 240px;
+  min-height: 228px;
   display: flex;
   flex-direction: column;
 }
@@ -373,13 +374,40 @@ input[type="search"]::-webkit-search-cancel-button {
   flex-direction: row;
   gap: 16px;
   align-items: center;
+  cursor: pointer;
 }
 
 .trending-user img {
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
   aspect-ratio: 1 / 1;
+}
+
+/* Bell */
+
+.bell:hover {
+  color: var(--accent-red);
+  transform-origin: 50% 0;
+  animation: vibrate 0.1s linear 0s infinite both;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
